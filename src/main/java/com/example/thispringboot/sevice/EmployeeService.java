@@ -10,11 +10,11 @@ import java.util.List;
 public class EmployeeService {
     @Autowired
     EmployeeRepository employeeRepository;
-    public List<Employee> findAll() {
+    public List<Employee> findAllEmployees() {
         return employeeRepository.findAll();
     }
 
-    public Employee save(Employee employee) {
+    public Employee createEmployee(Employee employee) {
         return employeeRepository.save(employee);
     }
 }

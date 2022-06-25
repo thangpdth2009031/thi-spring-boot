@@ -15,12 +15,12 @@ public class EmployeeApi {
     @Autowired
     EmployeeService employeeService;
     @RequestMapping(method = RequestMethod.GET)
-    public ResponseEntity<List<Employee>> getList() {
-        return ResponseEntity.ok(employeeService.findAll());
+    public ResponseEntity<List<Employee>> findAllEmployees() {
+        return ResponseEntity.ok(employeeService.findAllEmployees());
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    public ResponseEntity<Employee> create(@RequestBody Employee employee) {
-        return ResponseEntity.ok(employeeService.save(employee));
+    public ResponseEntity<Employee> createEmployee(@RequestBody Employee employee) {
+        return ResponseEntity.ok(employeeService.createEmployee(employee));
     }
 }
